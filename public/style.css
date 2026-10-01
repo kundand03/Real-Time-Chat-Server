@@ -1,0 +1,127 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+  height: 100vh;
+}
+
+.screen { height: 100vh; }
+.hidden { display: none; }
+
+#join-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #1a1d24;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.card h1 { font-size: 1.4rem; margin-bottom: 1.2rem; }
+
+.card input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #0f1115;
+  color: #fff;
+}
+
+.card button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #4f7cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card button:hover { background: #3d68f0; }
+
+.hint { font-size: 0.75rem; color: #888; margin-top: 1rem; }
+
+#chat-screen {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #14161c;
+  padding: 1rem;
+  border-right: 1px solid #23262e;
+}
+
+.sidebar h2, .sidebar h3 { font-size: 0.95rem; margin: 0.4rem 0; }
+#user-list { list-style: none; padding: 0; margin: 0; }
+#user-list li { padding: 0.25rem 0; color: #9fd18f; font-size: 0.85rem; }
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.msg { margin-bottom: 0.6rem; max-width: 70%; }
+.msg .author { font-size: 0.75rem; color: #7aa2f7; margin-bottom: 2px; }
+.msg .bubble {
+  background: #23262e;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+.msg.own { margin-left: auto; text-align: right; }
+.msg.own .bubble { background: #4f7cff; }
+.msg.system { text-align: center; color: #777; font-size: 0.8rem; max-width: 100%; }
+
+.typing {
+  min-height: 1.2rem;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+#message-form {
+  display: flex;
+  padding: 0.8rem;
+  border-top: 1px solid #23262e;
+}
+
+#message-input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #0f1115;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#message-form button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #4f7cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

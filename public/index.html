@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="join-screen" class="screen">
+    <div class="card">
+      <h1>Real-Time Chat</h1>
+      <input id="username-input" type="text" placeholder="Your name" maxlength="24" />
+      <input id="room-input" type="text" placeholder="Room name (e.g. general)" maxlength="24" value="general" />
+      <button id="join-btn">Join Room</button>
+      <p class="hint">Open this page in multiple tabs/browsers to test with several users.</p>
+    </div>
+  </div>
+
+  <div id="chat-screen" class="screen hidden">
+    <aside class="sidebar">
+      <h2>Room: <span id="room-name"></span></h2>
+      <h3>Online (<span id="user-count">0</span>)</h3>
+      <ul id="user-list"></ul>
+    </aside>
+    <main class="chat-main">
+      <div id="messages"></div>
+      <div id="typing-indicator" class="typing"></div>
+      <form id="message-form">
+        <input id="message-input" type="text" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
